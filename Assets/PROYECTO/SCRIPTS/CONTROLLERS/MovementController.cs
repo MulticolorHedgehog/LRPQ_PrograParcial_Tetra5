@@ -19,7 +19,6 @@ public class MovementController : MonoBehaviour
     [SerializeField] private float runSpeed = 8;
 
     [SerializeField] private float jumpForce = 5.3f;
-    [SerializeField] private float gravedad = -9.8f;
 
     private Rigidbody rb; // Este rigidbody para mas seguridad de obtencion, lo obtenemos unicamente buscando el componente
 
@@ -86,7 +85,7 @@ public class MovementController : MonoBehaviour
         if (JumpInputPressed())
         {
             Debug.Log("Saltando");
-            rb.AddForce(Vector3.up*jumpForce*-2*gravedad);
+            rb.AddForce(Vector3.up*jumpForce);
         }
     }
   

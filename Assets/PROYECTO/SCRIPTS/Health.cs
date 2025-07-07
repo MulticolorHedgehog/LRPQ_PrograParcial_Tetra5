@@ -39,7 +39,7 @@ public class Health : MonoBehaviour, IDamageable
         apuntes.Metodo();
         apuntes.time = 8;
         Debug.Log(apuntes._Numero);
-       
+
         Debug.Log(apuntes.nombre + " recibio daño");
 
 
@@ -54,4 +54,12 @@ public class Health : MonoBehaviour, IDamageable
 
     }
 
+    [ContextMenu("Matar personaje")]
+    public void KillCharacters()
+    {
+        Spawn spawn = FindObjectOfType<Spawn>();
+        spawn.OnCharacterKilled(this.gameObject);
+    }
+
+    //El character que usen debe tener este script
 }

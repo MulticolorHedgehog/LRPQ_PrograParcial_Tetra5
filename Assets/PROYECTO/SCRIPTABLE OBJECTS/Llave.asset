@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Llave
   _description: Es una llave que sirve para abrir una puerta
-  _prefab: {fileID: 8319975222643198805, guid: 738cfd698d3b7504cbda23f9c61e90e0, type: 3}
+  _prefab: {fileID: 2047245968214751915, guid: 26f5aa72cdaa1594fb347b73d04c160e, type: 3}
   _sprite: {fileID: 21300000, guid: 8a1bbbf36182be44887e419430641eec, type: 3}

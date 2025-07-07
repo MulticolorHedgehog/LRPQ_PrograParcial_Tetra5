@@ -106,31 +106,4 @@ public class PlayerMov : MonoBehaviour
         return Input.GetKeyDown(KeyCode.LeftShift);
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Enemigo"))
-        {
-            GetComponent<Enemigo>().Explosion();
-            daniojugador();
-        }
-
-    }
-
-    public void daniojugador()
-    {
-        
-        danioconteo++;
-
-        if (danioconteo >= maxdanio)
-        {
-            Respawn();
-        }
-    }
-
-    public void Respawn()
-    {
-        danioconteo = 0;
-        jugadorPosicion.transform.position = puntoRespawn.transform.position;
-        Physics.SyncTransforms();
-    }
 }

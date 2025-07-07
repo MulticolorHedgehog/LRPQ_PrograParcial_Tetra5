@@ -25,7 +25,7 @@ public class InventoryHandler : MonoBehaviour
 
     public int indice;
 
-    public int maxCapacity = 8;
+    public int maxCapacity = 24;
 
     public int numero;
 

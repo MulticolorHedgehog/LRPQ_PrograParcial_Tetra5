@@ -5,19 +5,19 @@ TagManager:
   serializedVersion: 2
   tags:
   - Door
-  - Enemigo
+  - Enemy
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Player
+  - Shootable
   - Water
   - UI
   - Interactable
+  - Player
+  - Techo
   - Ground
-  - 
-  - 
-  - 
+  - Enemy
   - 
   - 
   - 

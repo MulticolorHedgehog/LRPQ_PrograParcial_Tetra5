@@ -6,6 +6,7 @@ public class PickUp : MonoBehaviour, IInteractable
 {
 
     public Item item;
+
     private InventoryHandler inventory;
 
     private void Start()
@@ -18,7 +19,7 @@ public class PickUp : MonoBehaviour, IInteractable
         inventory.AgregarObjeto(item);
         Debug.Log(item.name + " Añadida al inventario");
         Debug.Log("Descripcion: " + item._description);
-        GameManager.Instance.llaves += 1;
+        GameManager.Instance.llaves++;
         Destroy(gameObject);
     }
 

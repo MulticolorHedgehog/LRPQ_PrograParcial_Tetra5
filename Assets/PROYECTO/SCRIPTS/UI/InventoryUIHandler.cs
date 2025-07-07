@@ -20,7 +20,7 @@ public class InventoryUIHandler : MonoBehaviour
     private bool inventoryOpened = false; // Si tengo o no abierto el inventario
 
     private int actualPage = 0;
-    [SerializeField] private int maxPages = 2;
+    [SerializeField] private int maxPages = 3;
 
     private void Start()
     {
@@ -80,7 +80,7 @@ public class InventoryUIHandler : MonoBehaviour
             newUiItem.transform.localScale = Vector3.one; // Le reseteo la escala a 1,1,1 por que a veces se escala de manera misteriosa
             itemsInstanciados[i] = newUiItem; // lo agrego a mi arreglo para tenerlo guardado para una futura ocasion
 
-            if(itemIndexCount >= 4)
+            if(itemIndexCount >= 8)
             {
                 newUiItem.SetActive(false);
             }
@@ -98,14 +98,14 @@ public class InventoryUIHandler : MonoBehaviour
             actualPage = 2;
         }
                                                                
-        int endIndex = Mathf.Min((actualPage * 4) + 4, inventory.maxCapacity); // Obtienes hasta que objeto vas a activar
+        int endIndex = Mathf.Min((actualPage * 8) + 8, inventory.maxCapacity); // Obtienes hasta que objeto vas a activar
 
-        for(int i = (actualPage - 1) * 4; i < endIndex - 4; i++) // desactivas los objetos de la pagina anterior
+        for(int i = (actualPage - 1) * 8; i < endIndex - 8; i++) // desactivas los objetos de la pagina anterior
         {
             itemsInstanciados[i].SetActive(false);
         }
 
-        for (int i = actualPage * 4; i < endIndex; i++) // activas los objetos de la nueva pagina
+        for (int i = actualPage * 8; i < endIndex; i++) // activas los objetos de la nueva pagina
         {
             if (itemsInstanciados[i] != null)
                 itemsInstanciados[i].SetActive(true);
@@ -127,14 +127,14 @@ public class InventoryUIHandler : MonoBehaviour
         {
             actualPage = 0;
         }
-        int endIndex = Mathf.Min((actualPage * 4 + 4), inventory.maxCapacity); // Obtienes hasta que objeto vas a activar
+        int endIndex = Mathf.Min((actualPage * 8 + 8), inventory.maxCapacity); // Obtienes hasta que objeto vas a activar
 
-        for (int i = (actualPage + 1) * 4; i < endIndex + 8; i++) // desactivas los objetos de la pagina siguiente
+        for (int i = (actualPage + 1) * 8; i < endIndex + 8; i++) // desactivas los objetos de la pagina siguiente
         {
             itemsInstanciados[i].SetActive(false);
         }
 
-        for (int i = actualPage * 4; i < endIndex; i++) // activas los objetos de la nueva pagina
+        for (int i = actualPage * 8; i < endIndex; i++) // activas los objetos de la nueva pagina
         {
             if (itemsInstanciados[i] != null)
                 itemsInstanciados[i].SetActive(true);

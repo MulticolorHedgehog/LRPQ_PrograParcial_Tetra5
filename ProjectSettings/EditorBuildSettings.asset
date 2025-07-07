@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/PARCIAL 5to Tetra/LR_Parcial.unity
+    guid: 00a2e55828153d34db7afc02c6e9b88c
   m_configObjects: {}
